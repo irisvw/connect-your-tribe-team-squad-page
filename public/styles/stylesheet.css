@@ -1,7 +1,7 @@
 /* FONTS INLADEN */
 @font-face {
     font-family: "play-font";
-    src: url(/assets/Good-Matcha.otf);
+    src: url(../assets/Good-Matcha.otf);
 }
 
 /* CSS RESET */
