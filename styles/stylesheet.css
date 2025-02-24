@@ -1,11 +1,7 @@
 /* FONTS INLADEN */
 @font-face {
-    font-family: '';
-    src: url();
-}
-@font-face {
-    font-family: '';
-    src: url();
+    font-family: "play-font";
+    src: url(/assets/Good-Matcha.otf);
 }
 
 /* CSS RESET */
@@ -17,16 +13,19 @@
 
 body {
     /* COLORS */
-    --black: #000000;
-    --white: #ffffff;
-    --book-color-one: ;
-    --book-color-two: ;
-    --book-color-three: ;
-    --book-color-four: ;
+    --book-text-dark: #000000;
+    --background-color: #ffffff;
+
+    --book-color-one: #F7B239;
+    --book-color-two: #F95428;
+    --book-color-three: #FF5959;
+    --book-color-four: #71DEBB;
+
+    --heading-color: #40750B;
+    --shelfs: #E38957;
 
     /* FONTS */
-    --primary-font: "primary", serif;
-    --secondary-font: "secondary", serif;
+    --primary-font: "play-font", serif;
 
     /* BORDER-RADIUS */
     --br-xs: 0.125rem;
@@ -42,7 +41,6 @@ body {
     --lg: 3rem;
     --xl: 4rem;
     --xxl: 6rem;
-
 }
 
 h1,
