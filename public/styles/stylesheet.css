@@ -22,7 +22,8 @@ body {
     --book-color-four: #71DEBB;
 
     --heading-color: #40750B;
-    --shelfs: #E38957;
+    --shelf: #E38957;
+    --support: #C36B3A;
 
     /* FONTS */
     --primary-font: "play-font", serif;
