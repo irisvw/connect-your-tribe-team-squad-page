@@ -52,6 +52,7 @@
   .shelf {
     position: relative;
     width: 500px;
+    max-width: 100vw;
     height: 20px;
     background-color: var(--shelf);
     border-radius: 10px;

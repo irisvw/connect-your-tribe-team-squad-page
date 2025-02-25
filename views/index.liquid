@@ -1,67 +1,69 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
-<h1 class="header-shelf">Squad 1G</h1>
-<div class="bookshelf">
-  <div class="shelf"></div>
-  <div class="support left"></div>
-  <div class="support right"></div>
-</div>
-
-<ul class="book-container">
-  {% for person in shelf1 %}
-    <li class="book {{ person.fav_book_genre | downcase }}">
-      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<div class="bookshelf">
-  <div class="shelf"></div>
-  <div class="support left"></div>
-  <div class="support right"></div>
-</div>
-
-<ul class="book-container">
-  {% for person in shelf2 %}
-    <li class="book {{ person.fav_book_genre | downcase }}">
-      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<div class="bookshelf">
-  <div class="shelf"></div>
-  <div class="support left"></div>
-  <div class="support right"></div>
-</div>
-
-<ul class="book-container">
-  {% for person in shelf3 %}
-    <li class="book {{ person.fav_book_genre | downcase }}">
-      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<div class="bookshelf">
-  <div class="shelf"></div>
-  <div class="support left"></div>
-  <div class="support right"></div>
-</div>
-
-<ul class="book-container">
-  {% for person in shelf4 %}
-    <li class="book {{ person.fav_book_genre | downcase }}">
-      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<div class="bookshelf">
-  <div class="shelf"></div>
-  <div class="support left"></div>
-  <div class="support right"></div>
-</div>
+<main>
+  <h1 class="header-shelf">Squad 1G</h1>
+  <div class="bookshelf">
+    <div class="shelf"></div>
+    <div class="support left"></div>
+    <div class="support right"></div>
+  </div>
+  
+  <ul class="book-container">
+    {% for person in shelf1 %}
+      <li class="book {{ person.fav_book_genre | downcase }}">
+        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="bookshelf">
+    <div class="shelf"></div>
+    <div class="support left"></div>
+    <div class="support right"></div>
+  </div>
+  
+  <ul class="book-container">
+    {% for person in shelf2 %}
+      <li class="book {{ person.fav_book_genre | downcase }}">
+        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="bookshelf">
+    <div class="shelf"></div>
+    <div class="support left"></div>
+    <div class="support right"></div>
+  </div>
+  
+  <ul class="book-container">
+    {% for person in shelf3 %}
+      <li class="book {{ person.fav_book_genre | downcase }}">
+        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="bookshelf">
+    <div class="shelf"></div>
+    <div class="support left"></div>
+    <div class="support right"></div>
+  </div>
+  
+  <ul class="book-container">
+    {% for person in shelf4 %}
+      <li class="book {{ person.fav_book_genre | downcase }}">
+        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <div class="bookshelf">
+    <div class="shelf"></div>
+    <div class="support left"></div>
+    <div class="support right"></div>
+  </div>
+</main>
 
 <h2>Huidige berichten</h2>
 

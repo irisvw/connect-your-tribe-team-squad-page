@@ -75,3 +75,8 @@ h4,
 .xs {
     font-size: 1rem;
 }
+
+main {
+    max-width: fit-content;
+    margin: 1vw auto;
+}
