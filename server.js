@@ -6,7 +6,6 @@ import { Liquid } from 'liquidjs';
 // Vul hier jullie team naam in
 const teamName = 'peak';
 
-
 const app = express()
 
 app.use(express.static('public'))
@@ -28,15 +27,18 @@ app.get('/', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
   const messagesResponseJSON = await messagesResponse.json();
 
-  let shelf1 = personResponseJSON.data.slice(0, 9);
-  let shelf2 = personResponseJSON.data.slice(9, 19);
-  let shelf3 = personResponseJSON.data.slice(19);
+  let shelf1 = personResponseJSON.data.slice(0, 8);
+  let shelf2 = personResponseJSON.data.slice(8, 16);
+  let shelf3 = personResponseJSON.data.slice(16, 24);
+  let shelf4 = personResponseJSON.data.slice(24);
 
   response.render('index.liquid', { 
     teamName: teamName,
     shelf1: shelf1,
     shelf2: shelf2,
     shelf3: shelf3,
+    shelf4: shelf4,
+    persons: personResponseJSON.data,
     messages: messagesResponseJSON.data
   })
 })

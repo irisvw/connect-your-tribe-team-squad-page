@@ -11,7 +11,7 @@
   {% for person in shelf1 %}
     <li class="book {{ person.fav_book_genre | downcase }}">
       <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </article>
+    </li>
   {% endfor %}
 </ul>
 
@@ -25,7 +25,7 @@
   {% for person in shelf2 %}
     <li class="book {{ person.fav_book_genre | downcase }}">
       <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </article>
+    </li>
   {% endfor %}
 </ul>
 
@@ -39,7 +39,21 @@
   {% for person in shelf3 %}
     <li class="book {{ person.fav_book_genre | downcase }}">
       <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
-    </article>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="bookshelf">
+  <div class="shelf"></div>
+  <div class="support left"></div>
+  <div class="support right"></div>
+</div>
+
+<ul class="book-container">
+  {% for person in shelf4 %}
+    <li class="book {{ person.fav_book_genre | downcase }}">
+      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+    </li>
   {% endfor %}
 </ul>
 
