@@ -20,11 +20,23 @@ app.use(express.urlencoded({extended: true}))
 
 
 app.get('/', async function (request, response) {
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
-  const messagesResponseJSON = await messagesResponse.json()
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"name":"1G"}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}');
+  // En haal daarvan de JSON op
+  const personResponseJSON = await personResponse.json();
 
-  response.render('index.liquid', {
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
+  const messagesResponseJSON = await messagesResponse.json();
+
+  let shelf1 = personResponseJSON.data.slice(0, 9);
+  let shelf2 = personResponseJSON.data.slice(9, 19);
+  let shelf3 = personResponseJSON.data.slice(19);
+
+  response.render('index.liquid', { 
     teamName: teamName,
+    shelf1: shelf1,
+    shelf2: shelf2,
+    shelf3: shelf3,
     messages: messagesResponseJSON.data
   })
 })
