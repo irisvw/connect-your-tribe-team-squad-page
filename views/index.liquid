@@ -1,8 +1,35 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
 <main>
+  <div class="container">
   <h1 class="header-shelf">Squad 1G</h1>
-  <div class="bookshelf">
+    <ul class="book-container">
+    <li class="book">
+      <details class="book-sort-filter">
+        <summary>Sorteer</summary>
+        <ul>
+          <a href="/sort/age">age</a>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </details>
+    </li>
+    <li class="book">
+      <details class="book-sort-filter">
+        <summary>Filter</summary>
+        <ul>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">...</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</div>
+
+<div class="bookshelf">
     <div class="shelf"></div>
     <div class="support left"></div>
     <div class="support right"></div>
@@ -10,10 +37,10 @@
   
   <ul class="book-container">
     {% for person in shelf1 %}
-      <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+    <li class="book {{ person.fav_book_genre | downcase }}">
+      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
       </li>
-    {% endfor %}
+      {% endfor %}
   </ul>
   
   <div class="bookshelf">
@@ -24,10 +51,10 @@
   
   <ul class="book-container">
     {% for person in shelf2 %}
-      <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+    <li class="book {{ person.fav_book_genre | downcase }}">
+      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
       </li>
-    {% endfor %}
+      {% endfor %}
   </ul>
   
   <div class="bookshelf">
@@ -38,10 +65,10 @@
   
   <ul class="book-container">
     {% for person in shelf3 %}
-      <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+    <li class="book {{ person.fav_book_genre | downcase }}">
+      <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
       </li>
-    {% endfor %}
+      {% endfor %}
   </ul>
   
   <div class="bookshelf">
@@ -65,12 +92,19 @@
   </div>
 </main>
 
+<dialog class="modal">
+		<h2>chat met ...</h2>
+    <p>we gaan even testen blaa blaa..</p>
+    
+    <button class="close-btn">cancel</button>
+  </dialog>
+
 <h2>Huidige berichten</h2>
 
 {% for message in messages %}
-  <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+<p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
 {% else %}
-  <p>Er zijn nog geen berichten voor dit team.</p>
+<p>Er zijn nog geen berichten voor dit team.</p>
 {% endfor %}
 
 <h2>Voeg een bericht toe</h2>
