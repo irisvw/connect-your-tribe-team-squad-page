@@ -1,17 +1,16 @@
 .container {
-  display:flex;
+  display: flex;
   flex-direction: row;
-  gap:5em;
+  gap: 5em;
 
-
-.header-shelf {
-  margin-bottom: -.4em;
-  color: var(--heading-color);
-}
+  .header-shelf {
+    margin-bottom: -.4em;
+    color: var(--heading-color);
+  }
 }
 
 .book-sort-filter {
-  writing-mode:horizontal-tb;
+  writing-mode: horizontal-tb;
   border-radius: 5px;
   padding: -0.2em .5em;
 }
@@ -19,7 +18,7 @@
 .book-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;  
+  flex-wrap: nowrap;
   align-items: flex-end;
   gap: .2em;
   width: 500px;
