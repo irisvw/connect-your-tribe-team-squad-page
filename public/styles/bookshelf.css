@@ -14,8 +14,8 @@
 .book-sort-filter {
   writing-mode: horizontal-tb;
   text-decoration: none;
-    font-family: dongle;
-    font-size: 24px;
+  font-family: dongle;
+  font-size: 24px;
 
   border-radius: 2px;
   padding: 0em .3em;
@@ -116,7 +116,6 @@
   width: fit-content;
   height: fit-content;
 
-  background-color: lightblue;
   border-radius: 5px;
   writing-mode: vertical-lr;
 
@@ -144,6 +143,7 @@
     line-height: 1rem;
     font-size: 1.5rem;
     color: black;
+    background-color: lightblue;
     padding: 1em .2em;
 
     &:hover {
