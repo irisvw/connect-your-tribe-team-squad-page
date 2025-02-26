@@ -34,7 +34,13 @@
   <ul class="book-container">
     {% for person in shelf1 %}
       <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+        <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</a></button>
+        <div class="popover-styling" popover id="{{ person.id }}">
+          {{ person.name }}
+          {{ person.birthdate }}
+          {{ person.fav_book_genre }}
+          {{ person.fav_coffee }}
+        </div>
       </li>
     {% endfor %}
   </ul>
@@ -48,7 +54,13 @@
   <ul class="book-container">
     {% for person in shelf2 %}
       <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+        <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</a></button>
+        <div popover id="{{ person.id }}">
+          {{ person.name }}
+          {{ person.birthdate }}
+          {{ person.fav_book_genre }}
+          {{ person.fav_coffee }}
+        </div>
       </li>
     {% endfor %}
   </ul>
@@ -62,7 +74,13 @@
   <ul class="book-container">
     {% for person in shelf3 %}
       <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+        <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</a></button>
+        <div popover id="{{ person.id }}">
+          {{ person.name }}
+          {{ person.birthdate }}
+          {{ person.fav_book_genre }}
+          {{ person.fav_coffee }}
+        </div>
       </li>
     {% endfor %}
   </ul>
