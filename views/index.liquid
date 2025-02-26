@@ -33,8 +33,8 @@
 
   <ul class="book-container">
     {% for person in shelf1 %}
-      <li class="book {{ person.fav_book_genre | downcase }}">
-        <button class="{{ person.fav_book_genre | downcase }}" popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</a></button>
+      <li class="book">
+        <button class="{{ person.fav_book_genre | downcase }}" popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
         <div popover id="{{ person.id }}">
           {{ person.name }}
           {{ person.birthdate | date: "%d-%m-%Y"}}
@@ -42,6 +42,7 @@
           {{ person.fav_coffee }}
         </div>
       </li>
+      
     {% endfor %}
   </ul>
   
@@ -120,8 +121,6 @@
     
     <button class="close-btn">cancel</button>
   </dialog> {% endcomment %}
-
-
 
 <h2>Huidige berichten</h2>
 
