@@ -11,19 +11,19 @@
     min-width: max-content;
   }
 
+  .book-sort-filter {
+    writing-mode: horizontal-tb;
+    border-radius: 5px;
+    padding: .2em .8em;
+    margin: 2px 20px;
+    left: 50px;
+    list-style-type: none;
 
-.book-sort-filter {
-  writing-mode: horizontal-tb;
-  border-radius: 5px;
-  padding: .2em .8em;
-  margin:2px 20px;
-  left:50px;
-  list-style-type:none;
+    background-color: var(--heading-color);
+    border-radius: 5px;
+  }
+}
 
-  background-color: var(--heading-color);
-  border-radius: 5px;
-}
-}
 .book-container {
   display: flex;
   flex-direction: row;
@@ -128,6 +128,9 @@
   }
 
   button {
+    appearance: none;
+    border: none;
+    border-radius: 2px;
     text-decoration: none;
     font-family: dongle;
     line-height: 1rem;
@@ -140,21 +143,21 @@
       text-decoration-thickness: 1px;
       text-underline-offset: -8px;
     }
-  }
 
-  &.thriller {
-    background-color: var(--book-color-one);
-  }
-
-  &.drama {
-    background-color: var(--book-color-two);
-  }
-
-  &.action {
-    background-color: var(--book-color-three);
-  }
-
-  &.comedy {
-    background-color: var(--book-color-four);
+    &.thriller {
+      background-color: var(--book-color-one);
+    }
+  
+    &.drama {
+      background-color: var(--book-color-two);
+    }
+  
+    &.action {
+      background-color: var(--book-color-three);
+    }
+  
+    &.comedy {
+      background-color: var(--book-color-four);
+    }
   }
 }
