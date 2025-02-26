@@ -1,12 +1,18 @@
 :popover-open {
     writing-mode: horizontal-tb;
     border: 0px;
+    border-radius: 25px;
     font-family: var(--primary-font);
 
     background-color: var(--book-color);
 
-    min-height: 90vh;
-    min-width: 90vw;
+    min-height: 80vh;
+    min-width: 80vw;
     display: block;
     margin: auto;
+    padding: 2rem;
+        
+        img {
+            width: 50%;
+        }
 }

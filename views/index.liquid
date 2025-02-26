@@ -34,7 +34,7 @@
 
   <ul class="book-container">
     {% for person in shelf1 %}
-      <li class="book">
+      <li class="book {{ person.fav_book_genre | downcase }}">
         <button class="{{ person.fav_book_genre | downcase }}" popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
         <div popover id="{{ person.id }}">
           {{ person.name }}
@@ -98,12 +98,14 @@
       <li class="book {{ person.fav_book_genre | downcase }}">
         <button class="{{ person.fav_book_genre | downcase }}" popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
         <div popover id="{{ person.id }}">
-          <ul>
-            <li>{{ person.name }}</li>
-            <li>{{ person.birthdate | date: "%d-%m-%Y"}}</li>
-            <li>{{ person.fav_book_genre }}</li>
-            <li>{{ person.fav_coffee }}</li>
-          </ul>
+          <h2>{{ person.name }}</h2>
+          <p>Hi mijn naam is {{ person.name }}. 
+            Ik ben geboren op {{ person.birthdate | date: "%d-%m-%Y"}}. 
+            Ik lees het liefst '{{ person.fav_book_genre }}' boeken.
+            Voor de maaltijd '{{ person.fav_kitchen }}' mag je mij wel wakker maken.
+            'S ochtends heb ik wel echt een '{{ person.fav_coffee }}' nodig om wakker te worden.
+            Verder ben ik in mijn vrije tijd het liefst bezig met {{ person.fav_hobby }}.</p>
+          <img src="{{ person.avatar }}" alt="Avatar van {{ person.name }}">
         </div>
       </li>
     {% endfor %}
