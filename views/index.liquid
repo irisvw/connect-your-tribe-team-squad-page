@@ -80,7 +80,8 @@
   <ul class="book-container">
     {% for person in shelf4 %}
       <li class="book {{ person.fav_book_genre | downcase }}">
-        <a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a>
+        <button popovertarget="my-popover"><a href="/student/{{ person.id }}">{{ person.name | split: ' ' | first }}</a></button>
+        <div popover id="my-popover">Greetings, one and all!</div>
       </li>
     {% endfor %}
   </ul>
@@ -92,12 +93,14 @@
   </div>
 </main>
 
-<dialog class="modal">
+{% comment %} <dialog class="modal">
 		<h2>chat met ...</h2>
     <p>we gaan even testen blaa blaa..</p>
     
     <button class="close-btn">cancel</button>
-  </dialog>
+  </dialog> {% endcomment %}
+
+
 
 <h2>Huidige berichten</h2>
 
