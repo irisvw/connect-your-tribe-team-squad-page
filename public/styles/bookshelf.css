@@ -150,7 +150,6 @@
     line-height: 1rem;
     font-size: 1.5rem;
     color: black;
-    background-color: inherit;
     padding: 1em .2em;
 
     background-color: var(--book-color);
