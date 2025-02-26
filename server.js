@@ -18,24 +18,6 @@ app.set('views', './views')
 app.use(express.urlencoded({extended: true}))
 
 
-// app.get('/', async function (request, response) {
-//   // Haal alle personen uit de WHOIS API op, van dit jaar
-//   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"name":"1G"}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}');
-//   // En haal daarvan de JSON op
-//   const personResponseJSON = await personResponse.json();
-
-//   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
-//   const messagesResponseJSON = await messagesResponse.json();
-
-//   console.log(personResponseJSON.data);
-
-//   response.render('index.liquid', { 
-//     teamName: teamName,
-//     persons: personResponseJSON.data,
-//     messages: messagesResponseJSON.data
-//   })
-// })
-
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
@@ -54,7 +36,7 @@ app.post('/', async function (request, response) {
 
 
 
-// fetching Book Drama 
+// fetching book filter 
 app.get('/', async function (request, response) {
 
   let filter = request.query.filter

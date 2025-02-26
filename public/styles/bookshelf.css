@@ -18,6 +18,7 @@
     font-size: 24px;
 
     border-radius: 2px;
+    min-width: 0px 7.5px;
     padding: 0em .3em;
     margin: 3px 15px;
     line-height: 1.7rem;
