@@ -84,6 +84,28 @@ app.get('/sort/age', async function (request, response) {
 
 })
 
+app.get('/filter/food/pizza', async function (request, response) {
+  // Haal alle personen uit de WHOIS API op, van dit jaar
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22fav_kitchen%22:%22Pizza%22},{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}},{%22squads%22:{%22squad_id%22:{%22cohort%22:%222425%22}}}]}');
+  // En haal daarvan de JSON op
+  const personResponseJSON = await personResponse.json();
+
+  let shelf1 = personResponseJSON.data.slice(0, 8);
+  let shelf2 = personResponseJSON.data.slice(8, 16);
+  let shelf3 = personResponseJSON.data.slice(16, 24);
+  let shelf4 = personResponseJSON.data.slice(24);
+
+  response.render('index.liquid', { 
+    teamName: teamName,
+    shelf1: shelf1,
+    shelf2: shelf2,
+    shelf3: shelf3,
+    shelf4: shelf4,
+    persons: personResponseJSON.data,
+  })
+
+})
+
 app.set('port', process.env.PORT || 8000)
 
 if (teamName == '') {
