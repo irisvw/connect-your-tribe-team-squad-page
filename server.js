@@ -18,23 +18,23 @@ app.set('views', './views')
 app.use(express.urlencoded({extended: true}))
 
 
-app.get('/', async function (request, response) {
-  // Haal alle personen uit de WHOIS API op, van dit jaar
-  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"name":"1G"}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}');
-  // En haal daarvan de JSON op
-  const personResponseJSON = await personResponse.json();
+// app.get('/', async function (request, response) {
+//   // Haal alle personen uit de WHOIS API op, van dit jaar
+//   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"name":"1G"}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}');
+//   // En haal daarvan de JSON op
+//   const personResponseJSON = await personResponse.json();
 
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
-  const messagesResponseJSON = await messagesResponse.json();
+//   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
+//   const messagesResponseJSON = await messagesResponse.json();
 
-  console.log(personResponseJSON.data);
+//   console.log(personResponseJSON.data);
 
-  response.render('index.liquid', { 
-    teamName: teamName,
-    persons: personResponseJSON.data,
-    messages: messagesResponseJSON.data
-  })
-})
+//   response.render('index.liquid', { 
+//     teamName: teamName,
+//     persons: personResponseJSON.data,
+//     messages: messagesResponseJSON.data
+//   })
+// })
 
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
@@ -57,16 +57,31 @@ app.post('/', async function (request, response) {
 // fetching Book Drama 
 app.get('/', async function (request, response) {
 
-  const filter = request.query.filter
+  let filter = request.query.filter
+  let personResponse
+  
+  if (filter) {
+    personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22fav_book_genre%22:%22'+filter+'%22},{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}},{%22squads%22:{%22squad_id%22:{%22cohort%22:%222425%22}}}]}');
+  } else {
+    personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}},{%22squads%22:{%22squad_id%22:{%22cohort%22:%222425%22}}}]}');
+  }
+
+  console.log(filter)
 
   // Haal alle personen uit de WHOIS API op, van dit jaar
-  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22fav_book_genre%22:%22'+filter+'%22},{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}},{%22squads%22:{%22squad_id%22:{%22cohort%22:%222425%22}}}]}');
+  
   // En haal daarvan de JSON op
   const personResponseJSON = await personResponse.json();
+
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
+  const messagesResponseJSON = await messagesResponse.json();
+
+
 
   response.render('index.liquid', { 
     teamName: teamName,
     persons: personResponseJSON.data,
+    messages: messagesResponseJSON.data
   })
 })
 
