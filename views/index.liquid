@@ -6,20 +6,21 @@
     <ul>
       <li class="book-sort-filter">
         <label for="filter">Filter By:</label>
-        <select id="filter">
-          <option value="#">...</option>
-          <option value="#">...</option>
-          <option value="#">...</option>
-          <option value="#">...</option>
-        </select>
+        <input list="filter-options" id="filter" name="filter">
+        <datalist id="filter-options">
+          <option href="/sort" value=".1..">
+          <option value="...">
+          <option value="...">
+          <option value="...">
+        </datalist>
       </li>
       <li class="book-sort-filter">
         <label for="Sort">Sort By:</label>
         <select id="Sort">
-          <option value="">age</option>
+          <option value="/sort/age">age</option>
           <option value="">A-Z</option>
           <option value="">...</option>
-          <option value="new">...</option>
+          <option value="">...</option>
         </select>
       </li>
     </ul>
