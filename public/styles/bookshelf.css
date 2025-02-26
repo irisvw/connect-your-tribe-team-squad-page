@@ -118,7 +118,7 @@
     transition: .1s ease-in-out;
   }
 
-  a {
+  button {
     text-decoration: none;
     font-family: dongle;
     line-height: 1rem;

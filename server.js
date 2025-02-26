@@ -27,6 +27,8 @@ app.get('/', async function (request, response) {
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
   const messagesResponseJSON = await messagesResponse.json();
 
+  console.log(personResponseJSON.data);
+
   let shelf1 = personResponseJSON.data.slice(0, 8);
   let shelf2 = personResponseJSON.data.slice(8, 16);
   let shelf3 = personResponseJSON.data.slice(16, 24);
