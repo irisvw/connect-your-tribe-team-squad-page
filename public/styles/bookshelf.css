@@ -135,6 +135,9 @@
   }
 
   button {
+    appearance: none;
+    border: none;
+    border-radius: 2px;
     text-decoration: none;
     font-family: dongle;
     line-height: 1rem;
@@ -147,21 +150,21 @@
       text-decoration-thickness: 1px;
       text-underline-offset: -8px;
     }
-  }
 
-  &.thriller {
-    background-color: var(--book-color-one);
-  }
-
-  &.drama {
-    background-color: var(--book-color-two);
-  }
-
-  &.action {
-    background-color: var(--book-color-three);
-  }
-
-  &.comedy {
-    background-color: var(--book-color-four);
+    &.thriller {
+      background-color: var(--book-color-one);
+    }
+  
+    &.drama {
+      background-color: var(--book-color-two);
+    }
+  
+    &.action {
+      background-color: var(--book-color-three);
+    }
+  
+    &.comedy {
+      background-color: var(--book-color-four);
+    }
   }
 }
