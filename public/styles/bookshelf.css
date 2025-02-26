@@ -14,8 +14,8 @@
 .book-sort-filter {
   writing-mode: horizontal-tb;
   text-decoration: none;
-    font-family: dongle;
-    font-size: 24px;
+  font-family: dongle;
+  font-size: 24px;
 
   border-radius: 2px;
   padding: 0em .3em;
@@ -116,7 +116,7 @@
   width: fit-content;
   height: fit-content;
 
-  background-color: lightblue;
+  --book-color: var(--book-color-five);
   border-radius: 5px;
   writing-mode: vertical-lr;
 
@@ -135,6 +135,22 @@
     transition: .1s ease-in-out;
   }
 
+  &.thriller {
+    --book-color: var(--book-color-one);
+  }
+
+  &.drama {
+    --book-color: var(--book-color-two);
+  }
+
+  &.action {
+    --book-color: var(--book-color-three);
+  }
+
+  &.comedy {
+    --book-color: var(--book-color-four);
+  }
+
   button {
     appearance: none;
     border: none;
@@ -144,28 +160,15 @@
     line-height: 1rem;
     font-size: 1.5rem;
     color: black;
+    background-color: lightblue;
     padding: 1em .2em;
+
+    background-color: var(--book-color);
 
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: -8px;
-    }
-
-    &.thriller {
-      background-color: var(--book-color-one);
-    }
-  
-    &.drama {
-      background-color: var(--book-color-two);
-    }
-  
-    &.action {
-      background-color: var(--book-color-three);
-    }
-  
-    &.comedy {
-      background-color: var(--book-color-four);
     }
   }
 }
