@@ -52,15 +52,15 @@
   background-position: 0%;
 }
 
-.book-container:nth-of-type(1n) {
+.book-container:nth-of-type(3n + 1) {
   background-image: url("../assets/plant1.svg");
 }
 
-.book-container:nth-of-type(2n) {
+.book-container:nth-of-type(3n + 2) {
   background-image: url("../assets/plant2.svg");
 }
 
-.book-container:nth-of-type(3n) {
+.book-container:nth-of-type(3n + 3) {
   background-image: url("../assets/plant3.svg");
 }
 
@@ -150,7 +150,6 @@
     line-height: 1rem;
     font-size: 1.5rem;
     color: black;
-    background-color: inherit;
     padding: 1em .2em;
 
     background-color: var(--book-color);
