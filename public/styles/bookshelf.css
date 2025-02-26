@@ -6,6 +6,7 @@
   .header-shelf {
     margin-bottom: -.4em;
     color: var(--heading-color);
+    min-width: max-content;
   }
 }
 
