@@ -1,16 +1,40 @@
 .container {
   display: flex;
   flex-direction: row;
-  gap: 1em;
-  justify-content: space-between;
-  position: relative;
+  align-items: anchor-center;
+
+  .list-container {
+    padding: 0 .5em;
+
+    ul {
+      margin:1.5px 0px 0px  0px;
+      display: flex;
+      flex-direction: row;
+
+      li {
+        min-width: 3vw;
+        border-style: solid;
+
+        a {
+          text-decoration: none;
+          color:var(--background-color);
+          color: black;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+          }
+        }
+      }
+    }
+  }
 
   .header-shelf {
     margin-bottom: -.4em;
     color: var(--heading-color);
     min-width: max-content;
   }
-
   .book-sort-filter {
     writing-mode: horizontal-tb;
     text-decoration: none;
@@ -18,9 +42,7 @@
     font-size: 24px;
 
     border-radius: 2px;
-    min-width: 0px 7.5px;
     padding: 0em .3em;
-    margin: 3px 15px;
     line-height: 1.7rem;
     list-style-type: none;
 
@@ -155,7 +177,7 @@
 
     background-color: var(--book-color);
 
-    &:hover {
+    &:hover{
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: -8px;

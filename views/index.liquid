@@ -3,6 +3,12 @@
 <main>
   <div class="container">
     <h1 class="header-shelf">Squad 1G</h1>
+    <div class="list-container">
+      <ul>
+        <li class="book-sort-filter button"><a href="/?sort=Age">Age</a></li>
+        <li class="book-sort-filter"><a href="/?filter=Action">...</a></il>
+      </ul>
+
     <ul>
       <li class="book-sort-filter"><a href="/?filter=Thriller">Thriller</a></li>
       <li class="book-sort-filter"><a href="/?filter=Action">Action</a></il>
@@ -10,10 +16,8 @@
       <li class="book-sort-filter"><a href="/?filter=Drama">Drama</a></il>
     </ul>
 
-      <ul>
-        <li class="book-sort-filter"><a href="/?sort=Age">Age</a></li>
-        <li class="book-sort-filter"><a href="/?filter=Action">...</a></il>
-      </ul>
+      
+      </div>
   </div>
 
   <div class="bookshelf"></div>
@@ -21,20 +25,6 @@
   <ul class="book-container">
     {% for person in persons %}
     {% assign remainder = forloop.index | modulo: 8 %}
-
-    <li class="book {{ person.fav_book_genre | downcase }}">
-      <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
-      <div popover id="{{ person.id }}">
-        <h2>{{ person.name }}</h2>
-        <p>Hi mijn naam is {{ person.name }}.
-          Ik ben geboren op {{ person.birthdate | date: "%d-%m-%Y"}}.
-          Ik lees het liefst '{{ person.fav_book_genre }}' boeken.
-          Voor de maaltijd '{{ person.fav_kitchen }}' mag je mij wel wakker maken.
-          'S ochtends heb ik wel echt een '{{ person.fav_coffee }}' nodig om wakker te worden.
-          Verder ben ik in mijn vrije tijd het liefst bezig met {{ person.fav_hobby }}.</p>
-        <img src="{{ person.avatar }}" alt="Avatar van {{ person.name }}">
-      </div>
-    </li>
 
       <li class="book {{ person.fav_book_genre | downcase }}">
         <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
