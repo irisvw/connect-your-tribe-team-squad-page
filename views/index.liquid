@@ -7,19 +7,19 @@
       <li class="book-sort-filter">
         <label for="filter">Filter By:</label>
         <select id="filter">
-          <option value="#">Available</option>
-          <option value="#">Out of Stock</option>
-          <option value="#">On Sale</option>
+          <option value="#">...</option>
+          <option value="#">...</option>
+          <option value="#">...</option>
           <option value="#">...</option>
         </select>
       </li>
       <li class="book-sort-filter">
         <label for="Sort">Sort By:</label>
         <select id="Sort">
-          <option value="available">Available</option>
-          <option value="out-of-stock">Out of Stock</option>
-          <option value="on-sale">On Sale</option>
-          <option value="new">New Arrivals</option>
+          <option value="available">...</option>
+          <option value="out-of-stock">...</option>
+          <option value="on-sale">...</option>
+          <option value="new">...</option>
         </select>
       </li>
     </ul>
@@ -30,7 +30,7 @@
     <div class="support left"></div>
     <div class="support right"></div>
   </div>
-  
+
   <ul class="book-container">
     {% for person in shelf1 %}
       <li class="book {{ person.fav_book_genre | downcase }}">

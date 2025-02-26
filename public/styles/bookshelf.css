@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  gap: 5em;
+  gap: 2em;
   justify-content: space-between;
   position: relative;
 
@@ -11,19 +11,26 @@
     min-width: max-content;
   }
 
-
 .book-sort-filter {
   writing-mode: horizontal-tb;
   border-radius: 5px;
   padding: .2em .8em;
-  margin:2px 20px;
-  left:50px;
+  margin:3px 15px;
   list-style-type:none;
 
-  background-color: var(--heading-color);
+  text-decoration: none;
+    font-family: dongle;
+    font-size: 24px;
+
+  background-color: lightblue;
   border-radius: 5px;
+
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.20);
 }
 }
+
 .book-container {
   display: flex;
   flex-direction: row;
