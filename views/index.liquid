@@ -4,22 +4,20 @@
   <div class="container">
     <h1 class="header-shelf">Squad 1G</h1>
     <ul>
-      <li class="book-sort-filter">
-        <label for="filter">Filter By:</label>
-        <select id="filter">
-          <option value="#">...</option>
-          <option value="#">...</option>
-          <option value="#">...</option>
-          <option value="#">...</option>
-        </select>
+      <li>
+        <ul>
+          <li class="book-sort-filter"><a href="filter/book/thriller">Thriller</a></li>
+          <li class="book-sort-filter"><a href="filter/book/action">Action</a></il>
+          <li class="book-sort-filter"><a href="filter/book/comedy">Comedy</a></il>
+          <li class="book-sort-filter"><a href="filter/book/drama">Drama</a></il>
       </li>
       <li class="book-sort-filter">
         <label for="Sort">Sort By:</label>
         <select id="Sort">
-          <option value="">age</option>
+          <option value="/sort/age">age</option>
           <option value="">A-Z</option>
           <option value="">...</option>
-          <option value="new">...</option>
+          <option value="">...</option>
         </select>
       </li>
     </ul>
@@ -33,10 +31,14 @@
       <li class="book {{ person.fav_book_genre | downcase }}">
         <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
         <div popover id="{{ person.id }}">
-          {{ person.name }}
-          {{ person.birthdate | date: "%d-%m-%Y"}}
-          {{ person.fav_book_genre }}
-          {{ person.fav_coffee }}
+          <h2>{{ person.name }}</h2>
+          <p>Hi mijn naam is {{ person.name }}. 
+            Ik ben geboren op {{ person.birthdate | date: "%d-%m-%Y"}}. 
+            Ik lees het liefst '{{ person.fav_book_genre }}' boeken.
+            Voor de maaltijd '{{ person.fav_kitchen }}' mag je mij wel wakker maken.
+            'S ochtends heb ik wel echt een '{{ person.fav_coffee }}' nodig om wakker te worden.
+            Verder ben ik in mijn vrije tijd het liefst bezig met {{ person.fav_hobby }}.</p>
+          <img src="{{ person.avatar }}" alt="Avatar van {{ person.name }}">
         </div>
       </li>
   
