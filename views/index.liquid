@@ -2,32 +2,28 @@
 
 <main>
   <div class="container">
-  <h1 class="header-shelf">Squad 1G</h1>
-    <ul class="book-container">
-    <li class="book">
-      <details class="book-sort-filter">
-        <summary>Sorteer</summary>
-        <ul>
-          <a href="/sort/age">age</a>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-        </ul>
-      </details>
-    </li>
-    <li class="book">
-      <details class="book-sort-filter">
-        <summary>Filter</summary>
-        <ul>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-          <li><a href="#">...</a></li>
-        </ul>
-      </details>
-    </li>
-  </ul>
-</div>
+    <h1 class="header-shelf">Squad 1G</h1>
+    <ul>
+      <li class="book-sort-filter">
+        <label for="filter">Filter By:</label>
+        <select id="filter">
+          <option value="#">Available</option>
+          <option value="#">Out of Stock</option>
+          <option value="#">On Sale</option>
+          <option value="#">...</option>
+        </select>
+      </li>
+      <li class="book-sort-filter">
+        <label for="Sort">Sort By:</label>
+        <select id="Sort">
+          <option value="available">Available</option>
+          <option value="out-of-stock">Out of Stock</option>
+          <option value="on-sale">On Sale</option>
+          <option value="new">New Arrivals</option>
+        </select>
+      </li>
+    </ul>
+  </div>
 
 <div class="bookshelf">
     <div class="shelf"></div>
