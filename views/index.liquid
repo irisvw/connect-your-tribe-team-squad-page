@@ -62,18 +62,18 @@
     </li>
 
     {% comment %} Na elke achtste persoon, sluit de <ul>, voeg een plank toe, en start een nieuwe <ul>. {% endcomment %}
-        {% if remainder == 0 %}
+    {% if remainder == 0 %}
       </ul>
       <div class="bookshelf"></div>
       <ul class="book-container">
-        {% endif %}
+    {% endif %}
 
-        {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
-          {% if forloop.last %}
-        </ul>
-        <div class="bookshelf"></div>
-        {% endif %}
-        {% endfor %}
+    {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
+    {% if forloop.last %}
+      </ul>
+      <div class="bookshelf"></div>
+    {% endif %}
+  {% endfor %}
 </main>
 
 {% comment %} <dialog class="modal">
