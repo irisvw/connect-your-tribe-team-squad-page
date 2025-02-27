@@ -22,6 +22,45 @@
         border-radius: 25px;
         margin-top: 15px;
     }
+
+    h3 {
+        margin-top: 1em;
+    }
+
+    form,
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        gap: 1em;
+    }
+
+    input,
+    textarea {
+        width: 80%;
+        appearance: none;
+        border: none;
+        border-radius: 5px;
+        line-height: 2em;
+        padding-inline: .5em;
+        font-family: sans-serif;
+    }
+
+    button {
+        appearance: none;
+        border: 1px solid black;
+        border-radius: 5px;
+        text-decoration: none;
+        font-family: dongle;
+        line-height: 1.5lh;
+        font-size: 2rem;
+        background-color: transparent;
+        color: black;
+        padding: .2em .5em;
+        width: fit-content;
+    }
 }
 
 :popover-open::backdrop {

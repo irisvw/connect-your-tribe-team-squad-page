@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  align-items: anchor-center;
+  align-items: flex-end;
 
   .list-container {
     padding: 0 .5em;
@@ -164,7 +164,7 @@
     --book-color: var(--book-color-four);
   }
 
-  button {
+  >button {
     appearance: none;
     border: none;
     border-radius: 2px;
