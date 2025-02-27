@@ -5,19 +5,16 @@
     <h1 class="header-shelf">Squad 1G</h1>
     <div class="list-container">
       <ul>
-        <li class="book-sort-filter button"><a href="/?sort=Age">Age</a></li>
-        <li class="book-sort-filter"><a href="/?filter=Action">...</a></il>
+        <li class="book-sort-filter"><a href="/?filter=Drama">Drama</a></il>
+        <li class="book-sort-filter"><a href="/">Home</a></il>
       </ul>
-
-    <ul>
-      <li class="book-sort-filter"><a href="/?filter=Thriller">Thriller</a></li>
-      <li class="book-sort-filter"><a href="/?filter=Action">Action</a></il>
-      <li class="book-sort-filter"><a href="/?filter=Comedy">Comedy</a></il>
-      <li class="book-sort-filter"><a href="/?filter=Drama">Drama</a></il>
-    </ul>
-
       
-      </div>
+      <ul>
+        <li class="book-sort-filter"><a href="/?filter=Thriller">Thriller</a></li>
+        <li class="book-sort-filter"><a href="/?filter=Action">Action</a></il>
+        <li class="book-sort-filter"><a href="/?filter=Comedy">Comedy</a></il>
+      </ul>
+    </div>
   </div>
 
   <div class="bookshelf"></div>
@@ -26,41 +23,41 @@
     {% for person in persons %}
     {% assign remainder = forloop.index | modulo: 8 %}
 
-      <li class="book {{ person.fav_book_genre | downcase }}">
-        <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
-        <div popover id="{{ person.id }}">
-          <h2>{{ person.name }}</h2>
-          <p>Hi mijn naam is {{ person.name }}. 
-            Ik ben geboren op {{ person.birthdate | date: "%d-%m-%Y"}}. 
-            Ik lees het liefst '{{ person.fav_book_genre }}' boeken.
-            Voor de maaltijd '{{ person.fav_kitchen }}' mag je mij wel wakker maken.
-            'S ochtends heb ik wel echt een '{{ person.fav_coffee }}' nodig om wakker te worden.
-            Verder ben ik in mijn vrije tijd het liefst bezig met {{ person.fav_hobby }}.</p>
-          <img src="{{ person.avatar }}" alt="Avatar van {{ person.name }}">
-        </div>
-      </li>
-  
+    <li class="book {{ person.fav_book_genre | downcase }}">
+      <button popovertarget="{{ person.id }}">{{ person.name | split: ' ' | first }}</button>
+      <div popover id="{{ person.id }}">
+        <h2>{{ person.name }}</h2>
+        <p>Hi mijn naam is {{ person.name }}.
+          Ik ben geboren op {{ person.birthdate | date: "%d-%m-%Y"}}.
+          Ik lees het liefst '{{ person.fav_book_genre }}' boeken.
+          Voor de maaltijd '{{ person.fav_kitchen }}' mag je mij wel wakker maken.
+          'S ochtends heb ik wel echt een '{{ person.fav_coffee }}' nodig om wakker te worden.
+          Verder ben ik in mijn vrije tijd het liefst bezig met {{ person.fav_hobby }}.</p>
+        <img src="{{ person.avatar }}" alt="Avatar van {{ person.name }}">
+      </div>
+    </li>
+
     {% comment %} Na elke achtste persoon, sluit de <ul>, voeg een plank toe, en start een nieuwe <ul>. {% endcomment %}
-    {% if remainder == 0 %}
+        {% if remainder == 0 %}
       </ul>
       <div class="bookshelf"></div>
       <ul class="book-container">
-    {% endif %}
-  
-    {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
-    {% if forloop.last %}
-      </ul>
-      <div class="bookshelf"></div>
-    {% endif %}
-  {% endfor %}
+        {% endif %}
+
+        {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
+          {% if forloop.last %}
+        </ul>
+        <div class="bookshelf"></div>
+        {% endif %}
+        {% endfor %}
 </main>
 
 {% comment %} <dialog class="modal">
-		<h2>chat met ...</h2>
-    <p>we gaan even testen blaa blaa..</p>
-    
-    <button class="close-btn">cancel</button>
-  </dialog> {% endcomment %}
+  <h2>chat met ...</h2>
+  <p>we gaan even testen blaa blaa..</p>
+
+  <button class="close-btn">cancel</button>
+</dialog> {% endcomment %}
 
 <h2>Huidige berichten</h2>
 
