@@ -5,14 +5,14 @@
     <h1 class="header-shelf">Squad 1G</h1>
     <div class="list-container">
       <ul>
-        <li class="book-sort-filter"><a href="/?filter=Drama">Drama</a></il>
-        <li class="book-sort-filter"><a href="/">Home</a></il>
+        <li class="book-sort-filter"><a href="/?filter=Drama">Drama</a></li>
+        <li class="book-sort-filter"><a href="/">Home</a></li>
       </ul>
       
       <ul>
         <li class="book-sort-filter"><a href="/?filter=Thriller">Thriller</a></li>
-        <li class="book-sort-filter"><a href="/?filter=Action">Action</a></il>
-        <li class="book-sort-filter"><a href="/?filter=Comedy">Comedy</a></il>
+        <li class="book-sort-filter"><a href="/?filter=Action">Action</a></li>
+        <li class="book-sort-filter"><a href="/?filter=Comedy">Comedy</a></li>
       </ul>
     </div>
   </div>
@@ -38,18 +38,18 @@
     </li>
 
     {% comment %} Na elke achtste persoon, sluit de <ul>, voeg een plank toe, en start een nieuwe <ul>. {% endcomment %}
-        {% if remainder == 0 %}
+    {% if remainder == 0 %}
       </ul>
       <div class="bookshelf"></div>
       <ul class="book-container">
-        {% endif %}
+    {% endif %}
 
-        {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
-          {% if forloop.last %}
-        </ul>
-        <div class="bookshelf"></div>
-        {% endif %}
-        {% endfor %}
+    {% comment %} Na de laatste persoon, sluit de <ul> af en voeg een laatste plank toe. {% endcomment %}
+    {% if forloop.last %}
+      </ul>
+      <div class="bookshelf"></div>
+    {% endif %}
+  {% endfor %}
 </main>
 
 {% comment %} <dialog class="modal">
