@@ -7,7 +7,7 @@
     padding: 0 .5em;
 
     ul {
-      margin:1.5px 0px 0px  0px;
+      margin: 1.5px 0px 0px 0px;
       display: flex;
       flex-direction: row;
 
@@ -17,7 +17,7 @@
 
         a {
           text-decoration: none;
-          color:var(--background-color);
+          color: var(--background-color);
           color: black;
 
           &:hover {
@@ -40,8 +40,8 @@
     position: relative;
     display: inline-block;
     margin: 0 1em;
-  }  
-  
+  }
+
   .btn-dropdown {
     padding: .2em 1em;
     appearance: none;
@@ -52,42 +52,42 @@
     font-family: dongle;
     line-height: 1rem;
     font-size: 1.5rem;
-    color:  white;
-    background-color:var(--heading-color);
+    color: white;
+    background-color: var(--heading-color);
 
     -webkit-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.20);
-  -moz-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.20);
-  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.20);
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color:var(--heading-color);
+    background-color: var(--heading-color);
     min-width: 160px;
     z-index: 1;
     cursor: pointer;
-      
-    -webkit-box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+
+    -webkit-box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
 
     a {
       color: white;
       padding: 12px 16px;
       text-decoration: none;
       font-family: dongle;
-      line-height: 1rem;  
+      line-height: 1rem;
       font-size: 1.5rem;
       display: block;
 
       &:hover {
-        background-color:#49860d;
+        background-color: #49860d;
       }
     }
   }
 
-  .dropdown:hover .dropdown-content{
+  .dropdown:hover .dropdown-content {
     display: block;
   }
 }
@@ -214,10 +214,11 @@
 
     background-color: var(--book-color);
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: -8px;
+      cursor: pointer;
     }
   }
 }
