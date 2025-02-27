@@ -11,11 +11,20 @@ app.engine('liquid', engine.express());
 app.set('views', './views');
 app.use(express.urlencoded({extended: true}));
 
-app.post('/', async function (request, response) {
+app.get('/person/:id', async function(request, response) {
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName} / ${request.params.id}"}`)
+  const messagesResponseJSON = await messagesResponse.json()
+
+  response.render('person.liquid', {
+    person: personDetailResponseJSON.data,
+  })
+})
+
+app.post('/person/:id/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
     body: JSON.stringify({
-      for: `Team ${teamName}`,
+      for: `Team ${teamName} / ${request.params.id}`,
       from: request.body.from,
       text: request.body.text
     }),
@@ -41,7 +50,7 @@ app.get('/', async function (request, response) {
 
   const personResponseJSON = await personResponse.json();
 
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":{"_istarts_with":"Team ${teamName}"}}`);
   const messagesResponseJSON = await messagesResponse.json();
 
   response.render('index.liquid', { 
