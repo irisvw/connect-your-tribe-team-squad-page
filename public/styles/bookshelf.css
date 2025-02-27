@@ -44,7 +44,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    margin: 0 1em;
+    margin: 0 1vw;
   }
 
   .btn-dropdown {
