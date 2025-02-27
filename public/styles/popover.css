@@ -60,6 +60,17 @@
         color: black;
         padding: .2em .5em;
         width: fit-content;
+
+        &:hover {
+            translate: 0 -2px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 3px 0px;
+            cursor: pointer;
+        }
+
+        &:active {
+            box-shadow: rgba(0, 0, 0, 0.2) 0 3px 0px inset;
+            translate: 0 2px;
+        }
     }
 }
 
@@ -78,3 +89,4 @@
 [popover] {
     transition: .3s all cubic-bezier(.01, -0.08, .56, 1.35);
 }
+
