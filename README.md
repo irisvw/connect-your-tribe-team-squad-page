@@ -23,16 +23,27 @@ Bij 'Kenmerken' staat welke technieken zijn gebruikt en hoe. Hier leg je uit hoe
 
 #### Main loop
 Elke plank bestaat uit een unordered list die de boeken bevat. Aan het begin van de loop wordt deze list geopend. Daarna begint de loop: voor elke persoon wordt een list element aangemaakt, die een knop bevat die een popover opent met informatie over die persoon. Aan het einde van de loop wordt gecheckt of de index van de loop deelbaar is door 8; in dat geval wordt de list afgesloten, wordt er een boekenplank aangemaakt, en wordt een nieuwe list geopend. Als hij bij de laatste persoon is, komt er een boekenplank ongeacht of de index deelbaar is door acht, en wordt de loop gesloten.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/views/index.liquid#L29
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/views/index.liquid#L67-L69
 
 #### Individuele reviews
 Wanneer een review wordt gepost, geeft de form de id van de persoon mee waar de review wordt achtergelaten, in de action attribute. Deze komt bij de post functie terecht en wordt meegegeven in de 'for', zodat elke review zowel onze team name bevat en de id van de persoon voor wie het bericht is.
 De reviews worden gerendered in een loop; voor elk bericht wordt gecheckt of de id overeenkomt met de id van de persoon die wordt weergegeven. Daardoor worden alleen berichten met overeenkomende IDs getoond.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/views/index.liquid#L55-L62
 
 #### Filter & sorteren
-De get functie controleerd elke keer of er een filter wordt meegegeven. Indien dat zo is, wordt die toegevoegd aan de url die gefetcht wordt. 
+De get functie controleerd elke keer of er een filter wordt meegegeven. Indien dat zo is, wordt die toegevoegd aan de url die gefetcht wordt.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/server.js#L36-L40
 
 #### Boekengenres
-Wanneer een boek gerenderd wordt, wordt het favoriete boekengenre van die persoon toegevoegd als class aan het boek. 
+Wanneer een boek gerenderd wordt, wordt het favoriete boekengenre van die persoon toegevoegd als class aan het boek.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/views/index.liquid#L31
+
+Afhankelijk van het genre wordt er een verschillende kleur meegegeven aan de CSS variabele book-color.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/public/styles/bookshelf.css#L195-L197
+
+Die CSS variabele wordt dan gebruikt door de button.
+https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c16514165381f7a44ebf6f2fbd513e/public/styles/bookshelf.css#L222
 
 
 ### Installatie
