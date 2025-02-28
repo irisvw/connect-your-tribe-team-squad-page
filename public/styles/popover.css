@@ -18,9 +18,9 @@
     }
 
     img {
-        height: 50%;
         border-radius: 25px;
         margin-top: 15px;
+        max-width: 90%;
     }
 
     h3 {
