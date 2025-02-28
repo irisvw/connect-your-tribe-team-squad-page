@@ -11,15 +11,6 @@ app.engine('liquid', engine.express());
 app.set('views', './views');
 app.use(express.urlencoded({extended: true}));
 
-app.get('/person/:id', async function(request, response) {
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName} / ${request.params.id}"}`)
-  const messagesResponseJSON = await messagesResponse.json()
-
-  response.render('person.liquid', {
-    person: personDetailResponseJSON.data,
-  })
-})
-
 app.post('/person/:id/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
@@ -62,11 +53,11 @@ app.get('/', async function (request, response) {
 
 app.get('/sort/age', async function (request, response) {
   
-  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=birthdate&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=birthdate&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}},{%22squads%22:{%22squad_id%22:{%22cohort%22:%222425%22}}}]}')
 
   const personResponseJSON = await personResponse.json()
   
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`);
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":{"_istarts_with":"Team ${teamName}"}}`);
   const messagesResponseJSON = await messagesResponse.json();
 
   response.render('index.liquid', { 
