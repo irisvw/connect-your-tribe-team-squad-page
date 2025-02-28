@@ -11,7 +11,17 @@ Onze site bestaat uit verschillende boekenplanken met boeken. Ieder persoon uit 
 
 **Jules:** Ik heb ervoor gezorgd dat de boeken met hetzelfde genre dezelfde kleur krijgen. Ook heb ik de pop-up gemaakt (zonder de 'reviews' die achter gelaten kunnen worden). In de pop-up heb ik de custom-data terug laten komen. Verder heb ik de gezamenlijke stylesheet gemaakt. 
 
-**Iris:** Ik heb de planken gemaakt, inclusief de planten en de boekjes die erop staan. Ik heb de HIFI schetsen gemaakt in Figma. Tot slot heb ik de 'reviews' gemaakt in de pop-up. 
+#### Iris
+Ik heb de HTML en CSS geschreven voor de boekenplanken, en de boeken die daarop staan. De plantjes zijn background images die om en om herhalen.
+
+![image](https://github.com/user-attachments/assets/82c71a4d-a211-4416-a0dc-20c0851412ab)
+
+Ook heb een interactieve HI-FI schets gemaakt in Figma. https://www.figma.com/proto/Z0ylc5oYhLP4jDsbgNPIaU/Untitled?node-id=136-3&t=jf9lHutaXAmlH2E6-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=136%3A3&show-proto-sidebar=1
+
+Tot slot heb ik het formulier en de 'reviews' in de pop-up gestijld, en de benodigde back-end geschreven om ze goed te laten functioneren.
+
+![image](https://github.com/user-attachments/assets/2670ca8e-730e-47f4-a802-2d857d4b81a9)
+
 
 ### Kenmerken
 Bij 'Kenmerken' staat welke technieken zijn gebruikt en hoe. Hier leg je uit hoe het NodeJS project werkt, de routes, hoe de data wordt opgehaald en/of gepost, en hoe de HTML wordt gerenderd met data. Leg hier ook uit wat NodeJS is, wat Express is en wat Liquid doet. Verwijs naar specifieke regels in jullie codebase; kopieer dus geen (screenshots van) code naar je Readme.
