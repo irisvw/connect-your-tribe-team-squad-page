@@ -57,9 +57,9 @@ https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c165
 ### Installatie
 Omdat je nu een server-side project hebt gemaakt, beschrijf je in de Readme ook hoe iemand anders het project kan installeren. Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. Hoe leg je aan iemand anders uit dat jullie bijvoorbeeld npm hebben gebruikt?
 
-- Navigeer naar nodejs.org en installeer de NodeJS ontwikkelomgeving. Kies voor NodeJS 22.13.1 with long-term support, download de benodigde bestanden en doorloop het installatieproces.
-- Fork daarna deze repository en clone deze op jouw computer.
-- Open deze repository in je editor, bijvoorbeeld VS code.
-- Voer in de terminal het commando `npm install` uit
-- Start de site op door in de terminal het commando `npm start` uit te voeren.
+1. Navigeer naar nodejs.org en installeer de NodeJS ontwikkelomgeving. Kies voor NodeJS 22.13.1 with long-term support, download de benodigde bestanden en doorloop het installatieproces.
+2. Fork daarna deze repository en clone deze op jouw computer.
+3. Open deze repository in je editor, bijvoorbeeld VS code.
+4. Voer in de terminal het commando `npm install` uit
+5. Start de site op door in de terminal het commando `npm start` uit te voeren.
 
