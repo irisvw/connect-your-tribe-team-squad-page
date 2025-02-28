@@ -20,11 +20,7 @@
           color: var(--background-color);
           color: black;
 
-          &:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
-          }
+        
         }
       }
     }
@@ -44,7 +40,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    margin: 0 1em;
+    margin: 0 1vw;
   }
 
   .btn-dropdown {
@@ -63,6 +59,12 @@
     -webkit-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.20);
     -moz-box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.20);
     box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.20);
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
   }
 
   .dropdown-content {
