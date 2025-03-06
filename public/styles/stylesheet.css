@@ -26,6 +26,19 @@ body {
     --shelf: #E38957;
     --support: #C36B3A;
 
+    /* COLORS FILTER  */
+    .Thriller {
+    color:var(--book-color-one);
+    }
+    .Drama {
+    color:var( --book-color-two);
+    }
+    .Comedy {
+    color:var(--book-color-five);
+    }
+    .Action {
+    color:var(--book-color-three);
+    }
     /* FONTS */
     --primary-font: "play-font", serif;
 
