@@ -35,9 +35,9 @@ https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c165
 
 ##### dropdown
 
-Ik heb als ontwerpkeuze bij de Filter en Sorteer knop gekozen voor een dropdown, op deze manier word er werkruimte bespaard en werkt het efficiënt. Via css code kan je hoveren over de knoppen en kan je selecteren op wat je wilt sorteren of filteren. De knoppen hebben feedforward wanneer je er overheen hoverd doordat het menu uitklapt, ook word de knop gehighlight met een `underline`. 
+Ik heb als ontwerpkeuze bij de Filter en Sorteer knop gekozen voor een dropdown, op deze manier word er werkruimte bespaard en werkt het efficiënt. Via css code kan je hoveren over de knoppen en kan je selecteren op wat je wilt sorteren of filteren. De knoppen hebben feedforward wanneer je er overheen hoverd doordat het menu uitklapt, ook word de knop gehighlight met een `underline`, Hierdoor is het duidelijker voor de persoon dat dit een werkende knop is.
 
-Wanneer je hoverd over de verschillende filters/sorteringen zie je dat background-color ook lichter word en je dus feedforward krijgt over de knoppen. Na het clicken van een filter of sortering veranderd de pagina en zie je direct de juiste boeken die feedback geven. Ik heb daarnaast gekozen om dezelfde kleuren als die van het h1 element te gebruiken met een witte kleur voor tekst, deze geeft een positief contrast (zie [contrast checker](https://webaim.org/resources/contrastchecker/?fcolor=40750B&bcolor=FFFFFF)).
+Wanneer je hoverd over de verschillende filters/sorteringen zie je dat background-color ook lichter word en je dus feedforward krijgt over de knoppen. Na het clicken van een filter of sortering veranderd de pagina en zie je direct de juiste boeken die feedback geven, de persoon weet nu dat die filterd/sorteerd. Ik heb daarnaast gekozen om dezelfde kleuren als die van het h1 element te gebruiken met een witte kleur voor tekst, deze geeft een positief contrast (zie [contrast checker](https://webaim.org/resources/contrastchecker/?fcolor=40750B&bcolor=FFFFFF)).
 
 https://github.com/user-attachments/assets/4535f1e0-f4b6-4a43-907a-5d54bbf44983
 
