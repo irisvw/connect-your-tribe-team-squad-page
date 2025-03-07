@@ -35,9 +35,13 @@ https://github.com/irisvw/connect-your-tribe-team-squad-page/blob/589d1e9936c165
 
 ##### dropdown
 
-Ik heb als ontwerpkeuze bij de Filter en Sorteer knop gekozen voor een dropdown, op deze manier word er werkruimte bespaard en werkt het efficiënt. Via css code kan je hoveren over de knoppen en kan je selecteren op wat je wilt sorteren of filteren. De knoppen hebben feedforward wanneer je er overheen hoverd doordat het menu uitklapt, ook word de knop gehighlight met een `underline`. Wanneer je hoverd over de verschillende filters/sorteringen zie je dat background-color ook lichter word en je dus feedforward krijgt over de knoppen. Na het clicken van een filter of sortering veranderd de pagina en zie je direct de juiste boeken die feedback geven.
+Ik heb als ontwerpkeuze bij de Filter en Sorteer knop gekozen voor een dropdown, op deze manier word er werkruimte bespaard en werkt het efficiënt. Via css code kan je hoveren over de knoppen en kan je selecteren op wat je wilt sorteren of filteren. De knoppen hebben feedforward wanneer je er overheen hoverd doordat het menu uitklapt, ook word de knop gehighlight met een `underline`. 
 
-https://github.com/user-attachments/assets/dce65d3c-e8c3-4c11-a717-92a9cd7a9087
+Wanneer je hoverd over de verschillende filters/sorteringen zie je dat background-color ook lichter word en je dus feedforward krijgt over de knoppen. Na het clicken van een filter of sortering veranderd de pagina en zie je direct de juiste boeken die feedback geven. Ik heb daarnaast gekozen om dezelfde kleuren als die van het h1 element te gebruiken met een witte kleur voor tekst, deze geeft een positief contrast (zie [contrast checker](https://webaim.org/resources/contrastchecker/?fcolor=40750B&bcolor=FFFFFF)).
+
+https://github.com/user-attachments/assets/4535f1e0-f4b6-4a43-907a-5d54bbf44983
+
+_De filter en sorteer knoppen in werking_
 
 #### Main loop
 Elke plank bestaat uit een unordered list die de boeken bevat. Aan het begin van de loop wordt deze list geopend. Daarna begint de loop: voor elke persoon wordt een list element aangemaakt, die een knop bevat die een popover opent met informatie over die persoon. Aan het einde van de loop wordt gecheckt of de index van de loop deelbaar is door 8; in dat geval wordt de list afgesloten, wordt er een boekenplank aangemaakt, en wordt een nieuwe list geopend. Als hij bij de laatste persoon is, komt er een boekenplank ongeacht of de index deelbaar is door acht, en wordt de loop gesloten.
